@@ -6,11 +6,11 @@ import Footer from './landingpage/Footer'
 import Navbar from './landingpage/Navbar'
 import { BrowserRouter , Routes , Route } from 'react-router-dom'
 import Register from './landingpage/Register'
-import Login from './landingpage/login'
 import Dashboard from './landingpage/mainpage/Dashboard'
 import Admin from './landingpage/admin'
 import AdminRoute from './routes/AdminRoute'
 import Voting from './landingpage/mainpage/Voting'
+import Login from './landingpage/login'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
