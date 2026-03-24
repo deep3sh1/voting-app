@@ -11,7 +11,7 @@ const FURL = process.env.FURL
 app.use(express.json());
 
 app.use(cors({
-  origin: `${FURL}`, // your frontend
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
