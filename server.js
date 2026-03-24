@@ -5,9 +5,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const PORT = process.env.PORT || 3000;
-const FURL = process.env.FURL
 
-// ✅ Built-in middleware (no need for body-parser)
+// Middleware
 app.use(express.json());
 
 app.use(cors({
@@ -16,22 +15,24 @@ app.use(cors({
   credentials: true
 }));
 
-
-const {jwtauth } = require("./midlleware/jwt");
-
-// ✅ Routes
+// Routes
 const userRoutes = require("./routes/userRoutes");
 const candidateRoutes = require("./routes/candidateRoute");
+
 app.use("/user", userRoutes);
-app.use("/candidate",  candidateRoutes);
+app.use("/candidate", candidateRoutes);
 
+// Test route
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 
-// ✅ MongoDB connection
+// MongoDB
 mongoose.connect(process.env.MONGODB_URL)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log("MongoDB connection error:", err));
 
-// ✅ Start server
+// Server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
