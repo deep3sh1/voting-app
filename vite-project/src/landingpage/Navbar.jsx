@@ -255,9 +255,9 @@ function Navbar() {
             </>
           ) : (
             <>
-              <a
+              <Link
+                to="/login"
                 className="btn btn-outline-dark px-4 py-2"
-                href="/login"
                 style={{
                   textDecoration: "none",
                   fontSize: "14px",
@@ -265,10 +265,10 @@ function Navbar() {
                 }}
               >
                 Login
-              </a>
+              </Link>
 
-              <a
-                href="/register"
+              <Link
+                to="/register"
                 style={{
                   backgroundColor: "#c2410c",
                   color: "#fff",
@@ -280,7 +280,7 @@ function Navbar() {
                 }}
               >
                 Register
-              </a>
+              </Link>
             </>
           )}
 
