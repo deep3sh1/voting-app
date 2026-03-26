@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Dashboard from "./mainpage/Dashboard";
 const API = import.meta.env.VITE_API_URL;
+
 
 function Login() {
   const [form, setForm] = useState({
@@ -11,6 +13,8 @@ function Login() {
   });
 
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
  const handleSubmit = async (e) => {
   e.preventDefault();
@@ -37,7 +41,7 @@ function Login() {
     alert("Login successful");
 
     // redirect
-    window.location.href = "/dashboard";
+   navigate("/dashboard"); 
 
   } catch (err) {
     console.log(err)
