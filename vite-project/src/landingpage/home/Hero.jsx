@@ -38,13 +38,13 @@ function Hero() {
           <div className="d-flex flex-wrap justify-content-center gap-3">
 
             {isLoggedIn ? (
-              <a
-                href="/dashboard"
+              <Link
+                to="/dashboard"
                 className="btn text-white px-4 py-2"
                 style={{ backgroundColor: "#c65a11" }}
               >
                 Go to Dashboard
-              </a>
+              </Link>
             ) : (
               <>
                 <Link
