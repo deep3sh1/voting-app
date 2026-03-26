@@ -10,7 +10,7 @@ import Dashboard from './landingpage/mainpage/Dashboard'
 import Admin from './landingpage/admin'
 import AdminRoute from './routes/AdminRoute'
 import Voting from './landingpage/mainpage/Voting'
-import Login from './landingpage/Login.jsx'
+import Login from './landingpage/Login'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>

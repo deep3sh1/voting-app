@@ -153,7 +153,7 @@ function Login() {
           <p style={{ marginTop: "16px", fontSize: "14px", color: "#6b7280" }}>
             New voter?{" "}
             <Link
-              to="/register"
+              to="/Register"
               style={{
                 color: "#c2410c",
                 fontWeight: "500",
