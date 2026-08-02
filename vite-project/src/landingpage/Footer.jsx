@@ -17,7 +17,7 @@ function Footer() {
 
       {/* Text */}
       <div>
-        Apna Election — Secure Online Voting Platform
+        Modi Election — Secure Online Voting Platform
       </div>
 
     </footer>
